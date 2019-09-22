@@ -23,7 +23,7 @@ export class DbInputComponent   {
 
   submitForm(form: any) {
     this.isSubmitted = true;
-
+    console.log(form);
   }
 
 }
