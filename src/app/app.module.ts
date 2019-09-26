@@ -9,7 +9,8 @@ import {AppMaterialModule} from './app-material/app-material.module';
 import { DbInputComponent } from './db-input/db-input.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-
+import { DatabaseService} from './database.service';
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +23,10 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     ReactiveFormsModule,
     AppMaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
